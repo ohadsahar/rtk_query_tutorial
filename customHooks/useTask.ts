@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useTaskQuery } from "../../api/task_query";
+import { useTaskQuery } from "../api/task_query";
 
 export const useTask = () => {
   const router = useRouter();

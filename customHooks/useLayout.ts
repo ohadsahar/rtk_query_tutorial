@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useCallback } from "react";
-import { useTasksQuery } from "../../api/task_query";
+import { useTasksQuery } from "../api/task_query";
 
 export const useLayout = () => {
   const { data: tasks, isLoading } = useTasksQuery();
