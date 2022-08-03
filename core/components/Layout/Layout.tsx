@@ -1,4 +1,4 @@
-import { useLayout } from "../../../customHooks/useLayout";
+import { useLayout } from "../../customHooks/useLayout";
 import TaskList from "../TaskList/TaskList";
 import { HomeWrapper } from "./styled";
 

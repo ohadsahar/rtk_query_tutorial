@@ -1,5 +1,5 @@
 import React from "react";
-import { useTask } from "../../../customHooks/useTask";
+import { useTask } from "../../customHooks/useTask";
 import { TaskTitleWrapper } from "../../../shared/Typogrphay";
 import { TaskInformationWrapper } from "./styled";
 
