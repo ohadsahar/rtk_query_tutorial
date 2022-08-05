@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const TaskInformationWrapper = styled.div`
   display: flex;
@@ -6,4 +6,4 @@ export const TaskInformationWrapper = styled.div`
   align-items: center;
   grid-column-gap: 1vh;
   padding: 1vh;
-`;
+`
