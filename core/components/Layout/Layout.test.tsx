@@ -10,7 +10,6 @@ describe("Checking Layout Component", () => {
         <Layout />
       </AppUtillTest>
     );
-
     const baseComponent = screen.getByTestId("home-wrapper");
     const baseComponentStyles = getComputedStyle(baseComponent);
     expect(baseComponentStyles.display).toBe("flex");

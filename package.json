@@ -11,7 +11,8 @@
     "prettier-lint": "prettier --check .",
     "prettier-format": "prettier --write .",
     "cypress": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "test": "NODE_OPTIONS='--experimental-vm-modules --experimental-specifier-resolution=node' jest"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
