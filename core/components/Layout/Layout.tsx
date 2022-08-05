@@ -5,7 +5,7 @@ import { HomeWrapper } from "./styled";
 const Layout = () => {
   const { tasks, isLoading, navigateTo } = useLayout();
   return (
-    <HomeWrapper>
+    <HomeWrapper data-testid="home-wrapper">
       <TaskList tasks={tasks} isLoading={isLoading} navigateTo={navigateTo} />
     </HomeWrapper>
   );
