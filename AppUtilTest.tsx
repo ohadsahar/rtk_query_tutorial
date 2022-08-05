@@ -1,10 +1,10 @@
-import { Provider } from 'react-redux'
-import { ThemeProvider } from 'styled-components'
-import GlobalStyle from './theme/globalStyle'
-import theme from './theme/theme'
-import store from './core/app/store/store'
+import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from './theme/globalStyle';
+import theme from './theme/theme';
+import store from './core/app/store/store';
 
-function AppUtillTest ({ children }: any) {
+function AppUtillTest({ children }: any) {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
@@ -12,7 +12,7 @@ function AppUtillTest ({ children }: any) {
         {children}
       </ThemeProvider>
     </Provider>
-  )
+  );
 }
 
-export default AppUtillTest
+export default AppUtillTest;

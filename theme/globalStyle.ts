@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -19,6 +19,6 @@ p {
     font-weight:300;
     line-height:1.2;
 }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

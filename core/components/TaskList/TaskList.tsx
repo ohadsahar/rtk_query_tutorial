@@ -1,8 +1,8 @@
-import React from 'react'
-import { TaskProps } from '../../../interface/Task.interface'
-import { LoadingTextWrapper } from '../../../shared/Typogrphay'
-import { ListWrapper } from '../Layout/styled'
-import Task from '../Task/Task'
+import React from 'react';
+import { TaskProps } from '../../../interface/Task.interface';
+import { LoadingTextWrapper } from '../../../shared/Typogrphay';
+import { ListWrapper } from '../Layout/styled';
+import Task from '../Task/Task';
 
 type TaskListProps = {
   isLoading: boolean;
@@ -13,19 +13,17 @@ type TaskListProps = {
 const TaskList = ({ tasks, isLoading, navigateTo }: TaskListProps) => {
   return (
     <div>
-      {!isLoading
-        ? (
+      {!isLoading ? (
         <ListWrapper>
           {tasks?.map((task: TaskProps, index: number) => (
             <Task task={task} onPress={navigateTo} key={index} />
           ))}
         </ListWrapper>
-          )
-        : (
+      ) : (
         <LoadingTextWrapper>Loading</LoadingTextWrapper>
-          )}
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default TaskList
+export default TaskList;
