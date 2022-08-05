@@ -1,10 +1,10 @@
-import React, { RefObject } from 'react';
-import { ButtonWrapper, FormWrapper, InputDiv } from './styled';
+import React, { RefObject } from 'react'
+import { ButtonWrapper, FormWrapper, InputDiv } from './styled'
 
 type TaskFormProps = {
-  newUserRef: RefObject<HTMLInputElement>;
-  submitUser: () => void;
-};
+  newUserRef: RefObject<HTMLInputElement>
+  submitUser: () => void
+}
 
 const TaskForm = ({ newUserRef, submitUser }: TaskFormProps) => {
   return (
@@ -14,7 +14,7 @@ const TaskForm = ({ newUserRef, submitUser }: TaskFormProps) => {
         Add Task
       </ButtonWrapper>
     </FormWrapper>
-  );
-};
+  )
+}
 
-export default TaskForm;
+export default TaskForm

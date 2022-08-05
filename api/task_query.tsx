@@ -1,6 +1,6 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { config } from '../constants/config';
-import { TaskProps } from '../interface/Task.interface';
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { config } from '../constants/config'
+import { TaskProps } from '../interface/Task.interface'
 
 export const tasksAPI = createApi({
   reducerPath: 'tasksAPI',
@@ -13,6 +13,6 @@ export const tasksAPI = createApi({
       query: (id: string) => `/todos/${id}`,
     }),
   }),
-});
+})
 
-export const { useTasksQuery, useTaskQuery } = tasksAPI;
+export const { useTasksQuery, useTaskQuery } = tasksAPI

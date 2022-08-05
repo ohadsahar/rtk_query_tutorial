@@ -1,9 +1,9 @@
-import type { AppProps } from 'next/app';
-import { Provider } from 'react-redux';
-import { ThemeProvider } from 'styled-components';
-import store from '../core/app/store/store';
-import GlobalStyle from '../theme/globalStyle';
-import theme from '../theme/theme';
+import type { AppProps } from 'next/app'
+import { Provider } from 'react-redux'
+import { ThemeProvider } from 'styled-components'
+import store from '../core/app/store/store'
+import GlobalStyle from '../theme/globalStyle'
+import theme from '../theme/theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </ThemeProvider>
     </Provider>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

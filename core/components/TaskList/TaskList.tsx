@@ -1,14 +1,14 @@
-import React from 'react';
-import { TaskProps } from '../../../interface/Task.interface';
-import { LoadingTextWrapper } from '../../../shared/Typogrphay';
-import { ListWrapper } from '../Layout/styled';
-import Task from '../Task/Task';
+import React from 'react'
+import { TaskProps } from '../../../interface/Task.interface'
+import { LoadingTextWrapper } from '../../../shared/Typogrphay'
+import { ListWrapper } from '../Layout/styled'
+import Task from '../Task/Task'
 
 type TaskListProps = {
-  isLoading: boolean;
-  tasks?: TaskProps[];
-  navigateTo: (id: number) => void;
-};
+  isLoading: boolean
+  tasks?: TaskProps[]
+  navigateTo: (id: number) => void
+}
 
 const TaskList = ({ tasks, isLoading, navigateTo }: TaskListProps) => {
   return (
@@ -23,7 +23,7 @@ const TaskList = ({ tasks, isLoading, navigateTo }: TaskListProps) => {
         <LoadingTextWrapper>Loading</LoadingTextWrapper>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default TaskList;
+export default TaskList
