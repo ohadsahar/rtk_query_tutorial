@@ -20,6 +20,7 @@ export const useLayout = () => {
   if (!isLoading && isSuccess) {
     tasks = data;
   }
+
   const submitTask = useCallback(() => {
     const taskToAdd = newTaskRef.current?.value.trim();
     if (taskToAdd) {
