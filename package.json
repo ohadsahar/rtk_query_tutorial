@@ -14,7 +14,8 @@
     "cypress": "cypress open",
     "cy:run": "cypress run",
     "test": "NODE_OPTIONS='--experimental-vm-modules --experimental-specifier-resolution=node' jest",
-    "tests": "npm run test && npm run cy:run"
+    "tests": "npm run test && npm run cy:run",
+    "e-lint": "eslint --fix --ext .js,.jsx,.ts,.tsx ."
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
