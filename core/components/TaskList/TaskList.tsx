@@ -1,5 +1,6 @@
 import { TaskProps } from 'interface/Task.interface';
 import React from 'react';
+import Task from '../Task/Task';
 import { TaskListWrapper } from './styled';
 
 type TaskListProps = {
@@ -10,13 +11,17 @@ type TaskListProps = {
 
 const TaskList = ({ tasks, isLoading, navigateTo }: TaskListProps) => {
   return (
-    <TaskListWrapper>
-      {tasks?.map((task: TaskProps) => (
-        <div>
-          <p>{task?.title}</p>
-        </div>
-      ))}
-    </TaskListWrapper>
+    <>
+      {!isLoading ? (
+        <TaskListWrapper>
+          {tasks?.map((task: TaskProps) => (
+            <Task task={task} onPress={navigateTo} />
+          ))}
+        </TaskListWrapper>
+      ) : (
+        <p>Loading</p>
+      )}
+    </>
   );
 };
 
