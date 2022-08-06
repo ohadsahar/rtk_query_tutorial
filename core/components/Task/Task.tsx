@@ -14,9 +14,7 @@ const Task = ({ task, onPress, onDelete, onUpdate }: TaskData) => {
     <TaskWrapper>
       <p onClick={() => onPress(task.id)}>Navigate to current task</p>
       <p onClick={() => onUpdate(task)}> Test updateing</p>
-      <ItemText onClick={() => onDelete(task.id)}>
-        For delete press: {task?.title}{' '}
-      </ItemText>
+      <ItemText onClick={() => onDelete(task.id)}>{task?.title}</ItemText>
     </TaskWrapper>
   );
 };
