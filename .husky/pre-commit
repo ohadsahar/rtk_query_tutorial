@@ -4,5 +4,7 @@
 npm run prettier-format 
 npm run prettier-lint 
 npx lint-staged
-
+npm run test
+npm run cy:run
+git add -A .
 
