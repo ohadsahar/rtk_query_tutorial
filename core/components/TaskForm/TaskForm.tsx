@@ -1,18 +1,17 @@
+import Button from '@/shared/Button/Button';
 import React, { RefObject } from 'react';
-import { ButtonWrapper, FormWrapper, InputDiv } from './styled';
+import { FormWrapper, InputDiv } from './styled';
 
 type TaskFormProps = {
   newUserRef: RefObject<HTMLInputElement>;
-  submitUser: () => void;
+  submitTask: () => void;
 };
 
-const TaskForm = ({ newUserRef, submitUser }: TaskFormProps) => {
+const TaskForm = ({ newUserRef, submitTask }: TaskFormProps) => {
   return (
     <FormWrapper data-testid="task-form-wrapper">
       <InputDiv type="text" ref={newUserRef} placeholder="Type your task" />
-      <ButtonWrapper type="submit" onClick={submitUser}>
-        Add Task
-      </ButtonWrapper>
+      <Button submitTask={submitTask} buttonText="Add Task" />
     </FormWrapper>
   );
 };

@@ -10,6 +10,9 @@ export const ItemText = styled.p`
   font-size: 32px;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: white;
+  font-size: 2vh;
+  text-align: left;
 `;
 
 export const LoadingTextWrapper = styled.div`

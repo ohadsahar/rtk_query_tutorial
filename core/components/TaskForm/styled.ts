@@ -12,11 +12,12 @@ export const FormWrapper = styled.div`
 
 export const InputDiv = styled.input`
   padding: 1rem;
-  width: 50%;
-`;
-
-export const ButtonWrapper = styled.button`
-  width: 35%;
+  width: 50vw;
+  padding: 1rem;
+  border: 3px solid ${(props) => props.theme.colors.third};
   border-radius: 8px;
-  border: 1px solid black;
+  :focus {
+    outline: none;
+    border: 3px solid ${(props) => props.theme.colors.boldTextColor};
+  }
 `;

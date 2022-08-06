@@ -5,6 +5,7 @@ export const HomeWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: ${(props) => props.theme.colors.main};
 `;
 
 export const ListWrapper = styled.ul`
