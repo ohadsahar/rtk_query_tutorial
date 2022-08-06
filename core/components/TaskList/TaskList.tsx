@@ -13,10 +13,10 @@ type TaskListProps = {
 const TaskList = ({ tasks, isLoading, navigateTo }: TaskListProps) => {
   return (
     <>
-      {isLoading ? (
+      {!isLoading ? (
         <TaskListWrapper>
           {tasks?.map((task: TaskProps) => (
-            <Task task={task} onPress={navigateTo} />
+            <Task key={task.id} task={task} onPress={navigateTo} />
           ))}
         </TaskListWrapper>
       ) : (

@@ -8,6 +8,8 @@ export const TaskTitleWrapper = styled.h1`
 export const ItemText = styled.p`
   color: black;
   font-size: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const LoadingTextWrapper = styled.div`
