@@ -4,13 +4,18 @@ import { TaskWrapper } from './styled';
 
 type TaskData = {
   task: TaskProps;
+  index: number;
   onPress: (id: number) => void;
+  deleteCurerntTask: (id: number, index: number) => void;
 };
 
-const Task = ({ task, onPress }: TaskData) => {
+const Task = ({ task, index, onPress, deleteCurerntTask }: TaskData) => {
   return (
     <TaskWrapper>
-      <ItemText onClick={() => onPress(task.id)}>{task?.title}</ItemText>
+      <p onClick={() => onPress(task.id)}>Navigate to current task</p>
+      <ItemText onClick={() => deleteCurerntTask(task.id, index)}>
+        {task?.title}
+      </ItemText>
     </TaskWrapper>
   );
 };

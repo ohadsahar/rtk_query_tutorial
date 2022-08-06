@@ -1,3 +1,3 @@
 export const config = {
-  api_url: 'https://jsonplaceholder.typicode.com',
+  api_url: 'http://localhost:3500',
 };

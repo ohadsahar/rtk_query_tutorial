@@ -12,7 +12,26 @@ export const tasksAPI = createApi({
     task: builder.query<TaskProps, string>({
       query: (id: string) => `/todos/${id}`,
     }),
+    addTask: builder.mutation<'', TaskProps>({
+      query: (task: TaskProps) => ({
+        url: '/todos',
+        method: 'POST',
+        body: task,
+      }),
+    }),
+    deleteTask: builder.mutation<0, number>({
+      query: (id: number) => ({
+        url: `/todos/${id}`,
+        method: 'DELETE',
+        body: id,
+      }),
+    }),
   }),
 });
 
-export const { useTasksQuery, useTaskQuery } = tasksAPI;
+export const {
+  useTasksQuery,
+  useTaskQuery,
+  useAddTaskMutation,
+  useDeleteTaskMutation,
+} = tasksAPI;

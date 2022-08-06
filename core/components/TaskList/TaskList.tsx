@@ -8,15 +8,27 @@ type TaskListProps = {
   tasks: TaskProps[] | undefined;
   isLoading: boolean;
   navigateTo: (id: number) => void;
+  deleteCurerntTask: (id: number, index: number) => void;
 };
 
-const TaskList = ({ tasks, isLoading, navigateTo }: TaskListProps) => {
+const TaskList = ({
+  tasks,
+  isLoading,
+  navigateTo,
+  deleteCurerntTask,
+}: TaskListProps) => {
   return (
     <>
       {!isLoading ? (
         <TaskListWrapper>
-          {tasks?.map((task: TaskProps) => (
-            <Task key={task.id} task={task} onPress={navigateTo} />
+          {tasks?.map((task: TaskProps, index: number) => (
+            <Task
+              index={index}
+              key={task.id}
+              task={task}
+              onPress={navigateTo}
+              deleteCurerntTask={deleteCurerntTask}
+            />
           ))}
         </TaskListWrapper>
       ) : (
