@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { tasksAPI } from '../../../api/task_query';
+import { tasksAPI } from '../../api/task_query';
 
 const store = configureStore({
   reducer: {

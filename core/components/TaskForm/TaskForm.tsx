@@ -8,7 +8,7 @@ type TaskFormProps = {
 
 const TaskForm = ({ newUserRef, submitUser }: TaskFormProps) => {
   return (
-    <FormWrapper>
+    <FormWrapper data-testid="task-form-wrapper">
       <InputDiv type="text" ref={newUserRef} placeholder="Type your task" />
       <ButtonWrapper type="submit" onClick={submitUser}>
         Add Task
