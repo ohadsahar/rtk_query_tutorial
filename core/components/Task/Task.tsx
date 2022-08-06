@@ -1,5 +1,5 @@
-import { TaskProps } from "../../../interface/Task.interface";
-import { ItemText } from "../../../shared/Typogrphay";
+import { TaskProps } from '../../../interface/Task.interface';
+import { ItemText } from '../../../shared/Typogrphay';
 
 type TaskData = {
   task: TaskProps;

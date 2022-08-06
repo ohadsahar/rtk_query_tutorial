@@ -1,5 +1,5 @@
-import React, { RefObject } from "react";
-import { ButtonWrapper, FormWrapper, InputDiv } from "./styled";
+import React, { RefObject } from 'react';
+import { ButtonWrapper, FormWrapper, InputDiv } from './styled';
 
 type TaskFormProps = {
   newUserRef: RefObject<HTMLInputElement>;
