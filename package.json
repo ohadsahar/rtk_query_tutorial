@@ -16,7 +16,8 @@
     "test": "NODE_OPTIONS='--experimental-vm-modules --experimental-specifier-resolution=node' jest",
     "tests": "npm run test && npm run cy:run",
     "eslint-check": "npx eslint . --ext .js,.ts,.tsx",
-    "eslint-fix": "npx eslint . --fix"
+    "eslint-fix": "npx eslint . --fix",
+    "server": "json-server --watch db.json --port 3500"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",

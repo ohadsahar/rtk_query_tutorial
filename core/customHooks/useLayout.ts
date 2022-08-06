@@ -5,22 +5,21 @@ import {
   useAddTaskMutation,
   useDeleteTaskMutation,
   useTasksQuery,
-} from '../../api/task_query';
+  useUpdateTaskMutation,
+} from '../../api/taskApiSlice';
 
 export const useLayout = () => {
-  const { data, isLoading, isSuccess } = useTasksQuery();
+  const { data, isLoading } = useTasksQuery();
   const [tasks, setTasks] = useState<TaskProps[]>([]);
   const [addTask] = useAddTaskMutation();
   const [deleteTask] = useDeleteTaskMutation();
+  const [updateTask] = useUpdateTaskMutation();
   const newTaskRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
 
   useEffect(() => {
-    if (!isLoading && isSuccess) {
-      console.log(data);
-      setTasks(data);
-    }
-  }, [isLoading, isSuccess, data]);
+    setTasks(data ?? []);
+  }, [data]);
 
   const submitTask = useCallback(() => {
     const taskToAdd = newTaskRef.current?.value.trim();
@@ -39,11 +38,13 @@ export const useLayout = () => {
     }
   }, [tasks]);
 
-  const deleteCurerntTask = useCallback((id: number, index: number) => {
+  const deleteCurerntTask = useCallback((id: number) => {
     deleteTask(id);
-    const cloneTasks = [...tasks];
-    cloneTasks.splice(index, 1);
-    setTasks(cloneTasks);
+  }, []);
+
+  const updateCurrentTask = useCallback((task: TaskProps) => {
+    const updatedTask = { ...task, title: 'new update task' };
+    updateTask(updatedTask);
   }, []);
 
   const navigateTo = useCallback((id: number) => {
@@ -55,6 +56,7 @@ export const useLayout = () => {
     isLoading,
     newTaskRef,
     deleteCurerntTask,
+    updateCurrentTask,
     navigateTo,
     submitTask,
   };

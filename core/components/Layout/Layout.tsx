@@ -10,6 +10,7 @@ const Layout = () => {
     newTaskRef,
     navigateTo,
     deleteCurerntTask,
+    updateCurrentTask,
     submitTask,
   } = useLayout();
 
@@ -20,7 +21,8 @@ const Layout = () => {
         tasks={tasks}
         isLoading={isLoading}
         navigateTo={navigateTo}
-        deleteCurerntTask={deleteCurerntTask}
+        onUpdate={updateCurrentTask}
+        onDelete={deleteCurerntTask}
       />
     </HomeWrapper>
   );

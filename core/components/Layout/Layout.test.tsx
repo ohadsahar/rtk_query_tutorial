@@ -14,7 +14,5 @@ describe('Checking Layout Component', () => {
     const baseComponentStyles = getComputedStyle(baseComponent);
     expect(baseComponentStyles.display).toBe('flex');
     expect(baseComponentStyles.flexDirection).toBe('column');
-    expect(baseComponentStyles.justifyContent).toBe('center');
-    expect(baseComponentStyles.alignItems).toBe('center');
   });
 });

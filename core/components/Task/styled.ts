@@ -7,5 +7,6 @@ export const TaskWrapper = styled.div`
   border-radius: 8px;
   padding: 3vw;
   width: 250px;
-  height: 250px;
+  height: 180px;
+  grid-row-gap: 2vh;
 `;

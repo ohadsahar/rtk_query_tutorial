@@ -11,11 +11,12 @@ html,body {
     font-size: 16px;
     font-family: 'Rubik', sans-serif; 
     scroll-behavior: smooth;
+    overflow-y:scroll;
 }
 p {
     margin:0px;
     padding:0px;
-    color:black;
+    color:white;
     font-weight:300;
     line-height:1.2;
 }
