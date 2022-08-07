@@ -1,6 +1,7 @@
 import { TaskProps } from '../../../interface/Task.interface';
 import { ItemText } from '../../../shared/Typogrphay';
-import { TaskWrapper } from './styled';
+import { TaskItemInfoWrapper, TaskWrapper } from './styled';
+import Actions from '../Actions/Actions';
 
 type TaskData = {
   task: TaskProps;
@@ -12,9 +13,15 @@ type TaskData = {
 const Task = ({ task, onPress, onDelete, onUpdate }: TaskData) => {
   return (
     <TaskWrapper>
-      <p onClick={() => onPress(task.id)}>Navigate to current task</p>
-      <p onClick={() => onUpdate(task)}> Test updateing</p>
-      <ItemText onClick={() => onDelete(task.id)}>{task?.title}</ItemText>
+      <TaskItemInfoWrapper>
+        <ItemText>{task?.title}</ItemText>
+      </TaskItemInfoWrapper>
+      <Actions
+        task={task}
+        onPress={onPress}
+        onDelete={onDelete}
+        onUpdate={onUpdate}
+      />
     </TaskWrapper>
   );
 };

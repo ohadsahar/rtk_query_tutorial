@@ -32,6 +32,9 @@ export const useLayout = () => {
         completed: false,
       };
       addTask(task);
+      if (newTaskRef.current) {
+        newTaskRef.current.value = '';
+      }
     }
   }, []);
 

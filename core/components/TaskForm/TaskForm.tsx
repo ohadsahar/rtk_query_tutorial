@@ -9,7 +9,10 @@ type TaskFormProps = {
 
 const TaskForm = ({ newUserRef, submitTask }: TaskFormProps) => {
   return (
-    <FormWrapper data-testid="task-form-wrapper">
+    <FormWrapper
+      data-testid="task-form-wrapper"
+      onSubmit={(event: React.SyntheticEvent) => event.preventDefault()}
+    >
       <InputDiv type="text" ref={newUserRef} placeholder="Type your task" />
       <Button submitTask={submitTask} buttonText="Add Task" />
     </FormWrapper>

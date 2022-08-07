@@ -5,7 +5,7 @@ export const TaskListWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  grid-row-gap: 2vh;
+  grid-row-gap: 6vh;
   grid-column-gap: 2vh;
   padding: 2vh;
 `;
