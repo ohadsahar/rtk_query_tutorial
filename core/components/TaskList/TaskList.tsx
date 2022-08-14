@@ -1,7 +1,7 @@
 import Loading from '@/shared/Loading/Loading';
 import { TaskProps } from 'interface/Task.interface';
 import React from 'react';
-import Task from '../Task/Task';
+import Task from '@/core/components/Task/Task';
 import { TaskListWrapper } from './styled';
 
 type TaskListProps = {

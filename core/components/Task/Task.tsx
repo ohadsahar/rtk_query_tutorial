@@ -1,7 +1,7 @@
-import { TaskProps } from '../../../interface/Task.interface';
-import { ItemText } from '../../../shared/Typogrphay';
+import { TaskProps } from '@/interface/Task.interface';
+import { ItemText } from '@/shared/Typogrphay';
 import { TaskItemInfoWrapper, TaskWrapper } from './styled';
-import Actions from '../Actions/Actions';
+import Actions from '@/core/components/Actions/Actions';
 
 type TaskData = {
   task: TaskProps;

@@ -21,7 +21,9 @@
       "@/assets/*": ["public/static/*"],
       "@/constants/*": ["constants/*"],
       "@/redux/*": ["redux/*"],
-      "@/services/*": ["services/*"]
+      "@/services/*": ["services/*"],
+      "@/interface/*": ["interface/*"],
+      "@/api/*": ["api/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.ts"],

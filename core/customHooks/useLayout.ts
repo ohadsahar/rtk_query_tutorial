@@ -13,6 +13,7 @@ export const useLayout = () => {
   let tasks: TaskProps[] = [];
   const newTaskRef = useRef<HTMLInputElement>(null);
   const { data, isLoading, isSuccess } = useTasksQuery();
+  console.log(data);
   const [addTask] = useAddTaskMutation();
   const [deleteTask] = useDeleteTaskMutation();
   const [updateTask] = useUpdateTaskMutation();

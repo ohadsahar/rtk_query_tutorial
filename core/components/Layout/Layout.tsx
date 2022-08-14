@@ -1,6 +1,6 @@
-import { useLayout } from '../../customHooks/useLayout';
+import { useLayout } from '@/core/customHooks/useLayout';
 import TaskForm from '../TaskForm/TaskForm';
-import TaskList from '../TaskList/TaskList';
+import TaskList from '@/core/components/TaskList/TaskList';
 
 import { HomeWrapper } from './styled';
 const Layout = () => {

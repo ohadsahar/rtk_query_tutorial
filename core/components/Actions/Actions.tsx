@@ -1,4 +1,4 @@
-import { TaskProps } from 'interface/Task.interface';
+import { TaskProps } from '@/interface/Task.interface';
 import React from 'react';
 import { FaExternalLinkAlt, FaTrash, FaEdit } from 'react-icons/fa';
 import { ActionsWrapper } from './styled';

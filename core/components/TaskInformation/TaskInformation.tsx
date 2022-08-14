@@ -1,6 +1,6 @@
 import React from 'react';
-import { useTask } from '../../customHooks/useTask';
-import { TaskTitleWrapper } from '../../../shared/Typogrphay';
+import { useTask } from '@/core/customHooks/useTask';
+import { TaskTitleWrapper } from '@/shared/Typogrphay';
 import { TaskInformationWrapper } from './styled';
 
 const Information = () => {

@@ -2,7 +2,7 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './theme/globalStyle';
 import theme from './theme/theme';
-import store from './redux/store/store';
+import store from '@/redux/store/store';
 
 function AppUtillTest({ children }: any) {
   return (
